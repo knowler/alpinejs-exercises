@@ -1,0 +1,18 @@
+---
+title: Alpine.js Exercises
+description: Discovering patterns with Alpine.js
+body_class: p-4
+---
+
+<h1 class="text-3xl mb-4">{{title}}</h1>
+{%- if collections.exercise %}
+<ul class="space-y-2 list-disc pl-6">
+{%- for exercise in collections.exercise %}
+  <li>
+    <a href="{{exercise.url}}" class="text-indigo-600 underline">{{exercise.data.title}}</a><br>{{exercise.data.description}}
+  </li>
+{%- endfor %}
+</ul>
+{%- else %}
+<p>No exercises.</p>
+{%- endif %}
