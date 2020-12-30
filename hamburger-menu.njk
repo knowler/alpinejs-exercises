@@ -1,0 +1,32 @@
+---
+title: Hamburger menu
+description: I’ll take mine with cheese.
+tags: exercise
+---
+
+<nav x-data="{open: false}" x-bind:class="{'fixed h-screen w-screen bg-black text-white': open}">
+  <button type="button" x-text="open ? 'Close' : 'Open'" @click="open = !open" class="fixed right-0 p-2">Open</button>
+  <ul x-show="open" class="h-full flex flex-col justify-center items-center">
+    <li>
+      <a href="#intro" @click="open = false">Intro</a>
+    </li>
+    <li>
+      <a href="#body" @click="open = false">Body</a>
+    </li>
+    <li>
+      <a href="#conclusion" @click="open = false">Conclusion</a>
+    </li>
+  </ul>
+</nav>
+
+<main>
+  <section id="intro" class="h-screen p-4 bg-blue-100">
+    <h2>Introduction</h2>
+  </section>
+  <section id="body" class="h-screen p-4 bg-red-100">
+    <h2>Body</h2>
+  </section>
+  <section id="conclusion" class="h-screen p-4 bg-green-100">
+    <h2>Conclusion</h2>
+  </section>
+</main>
