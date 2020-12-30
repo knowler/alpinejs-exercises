@@ -5,12 +5,12 @@ tags: exercise
 body_class: bg-indigo-300 text-indigo-900
 ---
 
-<header x-data="{ isScrolled: false }" x-init="isScrolled = window.scrollY > 0" class="fixed w-full p-4" x-bind:class="{ 'bg-indigo-600 text-indigo-100': isScrolled} " @scroll.window="isScrolled = window.scrollY > 0">
+<header x-data="{ isScrolled: false }" x-init="isScrolled = window.scrollY > 0" class="sticky top-0 w-full p-4" x-bind:class="{ 'bg-indigo-600 text-indigo-100': isScrolled }" @scroll.window="isScrolled = window.scrollY > 0">
   <header-label class="font-bold uppercase tracking-wide">Banner</header-label>
 </header>
 
 <main>
-  <section class="h-screen px-4 pt-16 pb-4">
+  <section class="h-screen p-4">
     <h2>Mostly readable section</h2>
   </section>
   <section class="h-screen p-4 bg-indigo-900 text-indigo-100">
